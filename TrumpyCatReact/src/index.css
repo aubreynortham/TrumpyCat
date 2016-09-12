@@ -54,13 +54,28 @@ button:hover {
 #catBtn {
   border-radius: 20px 0px 0px 20px;
   border: none;
-  margin: 10px;
+  margin: 5px;
+  font-size: 15px;
 }
 #quoteBtn {
   border-radius: 0px 20px 20px 0px;
   border: none;
-  margin: 10px;
+  margin: 5px;
+  font-size: 15px;
+}
+#randomBtn {
+  border-radius: 0px;
+  border: none;
+  margin: 5px;
+  font-size: 15px;
 }
 form#inline {
   display: inline;
+}
+#blackBar {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
 }
