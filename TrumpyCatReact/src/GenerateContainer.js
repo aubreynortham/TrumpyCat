@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Generate from './Generate';
 import Results from './Results';
+import {queryAPI} from './Utils';
 
 class GenerateContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
       hasGenerated: false,
+      randomized: [],
     }
   }
 
@@ -18,8 +20,11 @@ class GenerateContainer extends Component {
   }
   submitRandomQuery(evt){
     evt.preventDefault();
-    this.setState({
-      hasGenerated: true,
+    queryAPI(this.state.query).then(data => {
+      this.setState({
+        hasGenerated: true,
+        randomized: data,
+      });
     });
   }
   render(){
@@ -31,14 +36,14 @@ class GenerateContainer extends Component {
     if (this.state.hasGenerated){
       return (
         <div>
-          <Results randomized={randomized} />
+          <Results randomized={this.state.randomized} />
           <Generate
             handleSubmitCatQuery={(evt) => this.submitCatQuery(evt)}
             handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
             handleSubmitRandomQuery={(evt) => this.submitRandomQuery(evt)}
           />
         </div>
-      )
+      );
     }
     else {
       return (
@@ -47,7 +52,7 @@ class GenerateContainer extends Component {
           handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
           handleSubmitRandomQuery={(evt) => this.submitRandomQuery(evt)}
         />
-      )
+      );
     }
   }
 }
