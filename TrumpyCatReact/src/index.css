@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: rockwell, serif;
   text-align: center;
   background: url(http://i.imgur.com/YDi9sLU.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -9,8 +9,58 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+h1 {
+  line-height: 1.35em;
+  margin: 60px auto;
+}
 #homeLogo {
-  width: 40%;
+  width: 50%;
   height: auto;
-  margin: 0 auto;
+  margin: 0 0 60px 0;
+}
+#redEmph {
+  color: rgb(255, 0, 0);
+  font-style: italic;
+}
+button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: rockwell, serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  background: #f71313;
+  background-image: -webkit-linear-gradient(top, #f71313, #911616);
+  background-image: -moz-linear-gradient(top, #f71313, #911616);
+  background-image: -ms-linear-gradient(top, #f71313, #911616);
+  background-image: -o-linear-gradient(top, #f71313, #911616);
+  background-image: linear-gradient(to bottom, #f71313, #911616);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  border: 5px solid black;
+}
+
+button:hover {
+  background: #a80303;
+  background-image: -webkit-linear-gradient(top, #a80303, #ff0f0f);
+  background-image: -moz-linear-gradient(top, #a80303, #ff0f0f);
+  background-image: -ms-linear-gradient(top, #a80303, #ff0f0f);
+  background-image: -o-linear-gradient(top, #a80303, #ff0f0f);
+  background-image: linear-gradient(to bottom, #a80303, #ff0f0f);
+  text-decoration: none;
+}
+#catBtn {
+  border-radius: 20px 0px 0px 20px;
+  border: none;
+  margin: 10px;
+}
+#quoteBtn {
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  margin: 10px;
+}
+form#inline {
+  display: inline;
 }

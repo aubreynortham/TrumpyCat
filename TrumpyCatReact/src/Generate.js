@@ -5,12 +5,12 @@ class Generate extends Component {
   render() {
     return(
       <div>
-        <form>
-          <button><i className="fa fa-refresh" aria-hidden="true"></i> Cat</button>
+        <form id="inline">
+          <button id="catBtn"><i className="fa fa-refresh" aria-hidden="true"></i> Cat</button>
         </form>
 
-        <form>
-          <button><i className="fa fa-refresh" aria-hidden="true"></i> Quote</button>
+        <form id="inline">
+          <button id="quoteBtn">Quote <i className="fa fa-refresh" aria-hidden="true"></i></button>
         </form>
       </div>
 
