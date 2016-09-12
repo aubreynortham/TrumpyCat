@@ -79,3 +79,6 @@ form#inline {
   position: fixed;
   bottom: 0;
 }
+.bigKitty {
+  height: 400px;
+}

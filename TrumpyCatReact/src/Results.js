@@ -8,7 +8,8 @@ class Results extends Component{
       let content = $('<h1>').html(random.content).text();
       return (
         <div key={index}>
-        {content}
+          <h1>{content}</h1>
+          <img className= "bigKitty" src={random.image} />
         </div>
       )
     })

@@ -24,7 +24,7 @@ class GenerateContainer extends Component {
   }
   render(){
     let randomized = [
-      {content: "cat"},
+      {image: "http://i.imgur.com/VJbgQn1.jpg"},
       {content: "You know, it really doesn&#39;t matter what [the media] write as long as you&#39;ve got a young and beautiful piece of ass."}
     ];
 
