@@ -9,7 +9,7 @@ class Results extends Component{
       let content = $('<h1>').html(random.message).text();
       return (
         <div key={index}>
-          <Link to="/TrumpyCat">
+          <Link to="/TrumpyCat/#">
             <img id="cornerLogo" src="http://i.imgur.com/uPudds4.png" alt="Trumpy Cat!" />
           </Link>
           <h2><i className="fa fa-quote-left" aria-hidden="true"></i>
