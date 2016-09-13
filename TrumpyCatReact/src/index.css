@@ -82,13 +82,13 @@ form#inline {
 #blackBar {
   width: 100%;
   padding: 10px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
 }
 h2 {
   font-size: 2em;
-  background-color: rgba(251, 251, 251, 0.8);
+  background-color: rgba(251, 251, 251, 1);
   padding: 1em;
   border-radius: 1em;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
