@@ -28,15 +28,15 @@ class GenerateContainer extends Component {
     });
   }
   render(){
-    let randomized = [
-      {image: "http://i.imgur.com/VJbgQn1.jpg"},
-      {content: "You know, it really doesn&#39;t matter what [the media] write as long as you&#39;ve got a young and beautiful piece of ass."}
+    let starterContent = [
+      {content: "http://i.imgur.com/w7BaPYY.jpg"},
+      {message: "My whole life is about winning. I don&#39;t lose often. I almost never lose."}
     ];
 
     if (this.state.hasGenerated){
       return (
         <div>
-          <Results randomized={this.state.randomized} />
+          <Results randomized={this.state.randomized} catPic={this.state.randomized[0]} trumpQuote={this.state.randomized[1]}/>
           <Generate
             handleSubmitCatQuery={(evt) => this.submitCatQuery(evt)}
             handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
@@ -47,11 +47,14 @@ class GenerateContainer extends Component {
     }
     else {
       return (
-        <Generate
-          handleSubmitCatQuery={(evt) => this.submitCatQuery(evt)}
-          handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
-          handleSubmitRandomQuery={(evt) => this.submitRandomQuery(evt)}
-        />
+        <div>
+          <Results randomized={starterContent} catPic={starterContent[0]} trumpQuote={starterContent[1]}/>
+          <Generate
+            handleSubmitCatQuery={(evt) => this.submitCatQuery(evt)}
+            handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
+            handleSubmitRandomQuery={(evt) => this.submitRandomQuery(evt)}
+          />
+        </div>
       );
     }
   }

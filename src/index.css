@@ -93,7 +93,7 @@ form#inline {
 }
 h2 {
   font-size: 2em;
-  background-color: rgba(251, 251, 251, 1);
+  background-color: rgba(251, 251, 251, .7);
   padding: 1em;
   border-radius: 1em;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
