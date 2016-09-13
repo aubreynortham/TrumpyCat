@@ -18,6 +18,13 @@ h1 {
   height: auto;
   margin: 0 0 60px 0;
 }
+#cornerLogo {
+  width: 175px;
+  height: auto;
+  position: fixed;
+  top: 80px;
+  left: 10px;
+}
 #redEmph {
   color: rgb(255, 0, 0);
   font-style: italic;
@@ -77,8 +84,39 @@ form#inline {
   padding: 10px;
   background-color: black;
   position: fixed;
+  top: 0;
+}
+h2 {
+  font-size: 2em;
+  background-color: rgba(251, 251, 251, 0.8);
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
+  margin: 1em;
+  position: fixed;
+  width: 90%;
   bottom: 0;
 }
+.fa-quote-left, .fa-quote-right {
+  color: rgb(207, 15, 15);
+  margin: 0 15px;
+}
 .bigKitty {
-  height: 400px;
+  min-height: 100%;
+  min-width: 1100px;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1100px) {
+  .bigKitty {
+    left: 50%;
+    margin-left: -550px;
+  }
 }
