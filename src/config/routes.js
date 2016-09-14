@@ -7,9 +7,9 @@ import GenerateContainer from '../GenerateContainer';
 //pass in browserHistory to our router and define component routes
 var routes = (
   <Router history={browserHistory}>
-    <Route path='/' component={Main}>
+    <Route path='/TrumpyCat' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='/generate' component={GenerateContainer} />
+      <Route path='/TrumpyCat/generate' component={GenerateContainer} />
     </Route>
   </Router>
 );
