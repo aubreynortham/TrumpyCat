@@ -7,12 +7,9 @@ class Results extends Component{
     let {randomized} = this.props;
     let {catPic} = this.props;
     let {trumpQuote} = this.props;
-    //console.log("Look at all da data", catPic, trumpQuote, randomized);
-    console.log(this.props);
-    console.log(catPic);
-    console.log(trumpQuote);
+
+    //check for html character entities in the seed data and convert them
     trumpQuote = $('<h2>').html(trumpQuote.message).text();
-    console.log(trumpQuote);
 
     return (
       <div>
@@ -28,4 +25,4 @@ class Results extends Component{
   }
 }
 
-export default Results
+export default Results;
