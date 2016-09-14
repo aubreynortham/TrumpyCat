@@ -3,7 +3,7 @@ import Generate from './Generate';
 import Results from './Results';
 import {queryBoth, queryCat, queryTrump} from './Utils';
 
-
+//define initial state
 class GenerateContainer extends Component {
   constructor(props){
     super(props)
@@ -17,7 +17,7 @@ class GenerateContainer extends Component {
   //query for new cat only
   submitCatQuery(evt){
     evt.preventDefault();
-    queryCat().then(data => {
+    queryCat().then(data => { //this func defined in Utils.js
       this.setState({
         catResponse: data,
       });
@@ -26,16 +26,16 @@ class GenerateContainer extends Component {
   //query for new quote only
   submitQuoteQuery(evt){
     evt.preventDefault();
-    queryTrump().then(data => {
+    queryTrump().then(data => { //this func defined in Utils.js
       this.setState({
         quoteResponse: data,
-      })
-    })
+      });
+    });
   }
   //query for new cat and new quote together
   submitRandomQuery(evt){
     evt.preventDefault();
-    queryBoth().then(data => {
+    queryBoth().then(data => { //this func defined in Utils.js
       this.setState({
         catResponse: data[0],
         quoteResponse: data[1],
@@ -43,7 +43,7 @@ class GenerateContainer extends Component {
     });
   }
 
-  //define data being pulled into components
+  //define data being pulled into results and generate components
   render(){
       return (
         <div>

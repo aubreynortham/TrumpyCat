@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Link } from 'react-router';
 
+//defines home page layout and links
 class Home extends Component {
   render() {
     return (

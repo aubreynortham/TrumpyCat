@@ -4,6 +4,7 @@ import Home from '../Home';
 import Main from '../Main';
 import GenerateContainer from '../GenerateContainer';
 
+//pass in browserHistory to our router and define component routes
 var routes = (
   <Router history={browserHistory}>
     <Route path='/' component={Main}>
