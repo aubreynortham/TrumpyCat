@@ -1,42 +1,53 @@
 import React, { Component } from 'react';
 import Generate from './Generate';
 import Results from './Results';
-import {queryAPI} from './Utils';
+import {queryBoth, queryCat, queryTrump} from './Utils';
+
 
 class GenerateContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      hasGenerated: false,
       randomized: [],
+      //hardcoded starter data
+      catResponse: {content: "http://i.imgur.com/w7BaPYY.jpg"},
+      quoteResponse: {message: "My whole life is about winning. I don&#39;t lose often. I almost never lose."},
     }
   }
-
+  //query for new cat only
   submitCatQuery(evt){
     evt.preventDefault();
-  }
-  submitQuoteQuery(evt){
-    evt.preventDefault();
-  }
-  submitRandomQuery(evt){
-    evt.preventDefault();
-    queryAPI(this.state.query).then(data => {
+    queryCat().then(data => {
       this.setState({
-        hasGenerated: true,
-        randomized: data,
+        catResponse: data,
       });
     });
   }
-  render(){
-    let starterContent = [
-      {content: "http://i.imgur.com/w7BaPYY.jpg"},
-      {message: "My whole life is about winning. I don&#39;t lose often. I almost never lose."}
-    ];
+  //query for new quote only
+  submitQuoteQuery(evt){
+    evt.preventDefault();
+    queryTrump().then(data => {
+      this.setState({
+        quoteResponse: data,
+      })
+    })
+  }
+  //query for new cat and new quote together
+  submitRandomQuery(evt){
+    evt.preventDefault();
+    queryBoth().then(data => {
+      this.setState({
+        catResponse: data[0],
+        quoteResponse: data[1],
+      });
+    });
+  }
 
-    if (this.state.hasGenerated){
+  //define data being pulled into components
+  render(){
       return (
         <div>
-          <Results randomized={this.state.randomized} catPic={this.state.randomized[0]} trumpQuote={this.state.randomized[1]}/>
+          <Results catPic={this.state.catResponse} trumpQuote={this.state.quoteResponse}/>
           <Generate
             handleSubmitCatQuery={(evt) => this.submitCatQuery(evt)}
             handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
@@ -44,19 +55,6 @@ class GenerateContainer extends Component {
           />
         </div>
       );
-    }
-    else {
-      return (
-        <div>
-          <Results randomized={starterContent} catPic={starterContent[0]} trumpQuote={starterContent[1]}/>
-          <Generate
-            handleSubmitCatQuery={(evt) => this.submitCatQuery(evt)}
-            handleSubmitQuoteQuery={(evt) => this.submitQuoteQuery(evt)}
-            handleSubmitRandomQuery={(evt) => this.submitRandomQuery(evt)}
-          />
-        </div>
-      );
-    }
   }
 }
 
