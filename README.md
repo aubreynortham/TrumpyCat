@@ -7,5 +7,7 @@ The Trump quotes are queried from a third party API – the documentation for th
 
 The app itself is hosted here: http://aubrey-northam.com/TrumpyCat
 
+![Trumpy Cat App](http://i.imgur.com/TKsa7GS.jpg)
+
 ## Technologies Used
 HTML, CSS, JQuery, ReactJS, JSON, third-party API (see above), first-party API (using Ruby on Rails, Heroku), GitHub
