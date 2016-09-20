@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: rockwell, serif;
+  font-family: kreon, san-serif;
   text-align: center;
   background: url(http://i.imgur.com/YDi9sLU.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -32,7 +32,7 @@ h1 {
 button {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: rockwell, serif;
+  font-family: kreon, serif;
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
@@ -121,7 +121,7 @@ h2 {
 
 @media screen and (max-width: 1100px) {
   .bigKitty {
-    left: 50%;
-    margin-left: -550px;
+    height: 100%;
+    width: auto;
   }
 }
