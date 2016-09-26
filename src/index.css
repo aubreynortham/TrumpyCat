@@ -122,6 +122,63 @@ h2 {
 
 /* ---------------------------------------- */
 
+
+/* Desktop responsive */
+@media only screen
+  and (max-width: 800px) {
+
+  h1 {
+    line-height: 1.3em;
+    font-size: 1.2em;
+    margin: 30px 15px;
+  }
+  button {
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 3px solid black;
+  }
+  #cornerLogo {
+    width: 0px;
+  }
+  #blackBar {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0px;
+    left: 0px;
+  }
+  #catBtn {
+    margin: 2px;
+    font-size: 10px;
+  }
+  #quoteBtn {
+    margin: 2px;
+    font-size: 10px;
+  }
+  #randomBtn {
+    margin: 2px;
+    font-size: 10px;
+  }
+  h2 {
+    font-size: 1em;
+    padding: 10px 10px 10px 0;
+  }
+  .fa-quote-left, .fa-quote-right {
+    margin: 0 5px;
+  }
+  .bigKitty {
+    min-height: auto;
+    min-width: 80%;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    z-index: -1;
+  }
+
+}
+
 /* Portrait and Landscape */
 @media only screen
   and (min-device-width: 414px)
@@ -177,62 +234,5 @@ h2 {
       top: 50px;
       z-index: -1;
     }
-
-}
-
-
-/* Desktop responsive */
-@media only screen
-  and (max-width: 800px) {
-
-  h1 {
-    line-height: 1.3em;
-    font-size: 1.2em;
-    margin: 30px 15px;
-  }
-  button {
-    letter-spacing: 1px;
-    font-size: 13px;
-    padding: 5px 10px;
-    border: 3px solid black;
-  }
-  #cornerLogo {
-    width: 0px;
-  }
-  #blackBar {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0px;
-    left: 0px;
-  }
-  #catBtn {
-    margin: 2px;
-    font-size: 10px;
-  }
-  #quoteBtn {
-    margin: 2px;
-    font-size: 10px;
-  }
-  #randomBtn {
-    margin: 2px;
-    font-size: 10px;
-  }
-  h2 {
-    font-size: 1em;
-    padding: 10px 10px 10px 0;
-  }
-  .fa-quote-left, .fa-quote-right {
-    margin: 0 5px;
-  }
-  .bigKitty {
-    min-height: auto;
-    min-width: 80%;
-    height: auto;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-    top: 50px;
-    z-index: -1;
-  }
 
 }
