@@ -162,6 +162,9 @@ h2 {
   h2 {
     font-size: 1em;
     padding: 10px 10px 10px 0;
+    margin: 1em;
+    position: relative;
+    width: 90%;
   }
   .fa-quote-left, .fa-quote-right {
     margin: 0 5px;
@@ -181,7 +184,7 @@ h2 {
     min-width: 350px;
     height: 170px;
     width: auto;
-    margin: 0 auto;
+    margin: 0 0 40px 0;
     position: relative;
     top: 50px;
     z-index: -1;
@@ -230,6 +233,9 @@ h2 {
     h2 {
       font-size: 1em;
       padding: 10px 10px 10px 0;
+      margin: 1em;
+      position: relative;
+      width: 90%;
     }
     .fa-quote-left, .fa-quote-right {
       margin: 0 5px;
@@ -239,7 +245,7 @@ h2 {
       min-width: 350px;
       height: 170px;
       width: auto;
-      margin: 0 auto;
+      margin: 0 0 40px 0;
       position: relative;
       top: 50px;
       z-index: -1;
