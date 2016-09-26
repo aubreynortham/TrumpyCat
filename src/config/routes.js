@@ -9,7 +9,7 @@ var routes = (
   <Router history={browserHistory}>
     <Route path='/TrumpyCat' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='/TrumpyCat/generate' component={GenerateContainer} />
+      <Route path='/TrumpyCat/generate/' component={GenerateContainer} />
     </Route>
   </Router>
 );

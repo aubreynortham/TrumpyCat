@@ -12,7 +12,7 @@ class Home extends Component {
         Try hearing it from a cat instead!</h1>
         <img id="homeLogo" src="http://i.imgur.com/uPudds4.png" alt="Trumpy Cat!" />
         <br />
-        <Link to="/TrumpyCat/generate">
+        <Link to="/TrumpyCat/generate/">
           <button type="button" id="generateBtn">Generate A Trumpy Cat!</button>
         </Link>
       </div>
