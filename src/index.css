@@ -225,8 +225,9 @@ h2 {
       margin: 0 5px;
     }
     .bigKitty {
-      min-height: 170px;
-      min-width: auto;
+      /*min-height: 170px;*/
+      max-height: 170px;
+      max-width: auto;
       height: 170px;
       width: auto;
       margin: 0 auto;
